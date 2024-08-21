@@ -8,12 +8,13 @@ producer = KafkaProducer(
 )
 
 print("채팅 프로그램 - 메시지 발신자")
+username = input("채팅에 사용하실 이름을 정해주세요 : ")
 print("메시지를 입력하세요. (종료시 'exit' 입력)")
 
 while True:
     message = input("You : ")
 
-    data = {'message': message, 'time': time.time()}
+    data = {'username':username, 'message': message, 'time': time.time()}
 
     if message == 'exit':
         producer.close()
