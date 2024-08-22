@@ -1,6 +1,7 @@
 from kafka import KafkaConsumer
 from json import loads
 import time
+
 consumer = KafkaConsumer(
     'chat',
     bootstrap_servers=['localhost:9092'],
